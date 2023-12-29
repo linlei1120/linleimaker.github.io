@@ -1,2505 +1,1316 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Home</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" href="image/favicon.png" type="image/gif" sizes="16x16">
+	<link rel="stylesheet" type="text/css" href="css/vendor.bundle.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<style>
-	/* ==========================================================================
-   NMC Bootstrap
 
-   This LESS file imports all other LESS files. You should compile
-   and minify this file before site launch.
-   ========================================================================== */
-	/* Import NMC bootstrap */
-	/**
- * html5doctor.com Reset Stylesheet
- * v1.6.1
- * Last Updated: 2010-09-17
- * Author: Richard Clark - http://richclarkdesign.com
- * Twitter: @rich_clark
- */
-	html,
-	body,
-	div,
-	span,
-	object,
-	iframe,
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	p,
-	blockquote,
-	pre,
-	abbr,
-	address,
-	cite,
-	code,
-	del,
-	dfn,
-	em,
-	img,
-	ins,
-	kbd,
-	q,
-	samp,
-	small,
-	strong,
-	sub,
-	sup,
-	var,
-	b,
-	i,
-	dl,
-	dt,
-	dd,
-	ol,
-	ul,
-	li,
-	fieldset,
-	form,
-	label,
-	legend,
-	table,
-	caption,
-	tbody,
-	tfoot,
-	thead,
-	tr,
-	th,
-	td,
-	article,
-	aside,
-	canvas,
-	details,
-	figcaption,
-	figure,
-	footer,
-	header,
-	hgroup,
-	menu,
-	nav,
-	section,
-	summary,
-	time,
-	mark,
-	audio,
-	video {
-		margin: 0;
-		padding: 0;
-		border: 0;
-		outline: 0;
-		font-size: 100%;
-		vertical-align: baseline;
-		background: transparent;
-	}
+<body data-spy="scroll" data-target="#navbar" data-offset="70">
 
-	body {
-		line-height: 1;
-	}
-
-	article,
-	aside,
-	details,
-	figcaption,
-	figure,
-	footer,
-	header,
-	hgroup,
-	menu,
-	nav,
-	section {
-		display: block;
-	}
-
-	nav ul {
-		list-style: none;
-	}
-
-	blockquote,
-	q {
-		quotes: none;
-	}
-
-	blockquote:before,
-	blockquote:after,
-	q:before,
-	q:after {
-		content: '';
-		content: none;
-	}
-
-	a {
-		margin: 0;
-		padding: 0;
-		font-size: 100%;
-		vertical-align: baseline;
-		background: transparent;
-	}
-
-	/* change colours to suit your needs */
-	ins {
-		background-color: #ff9;
-		color: #000;
-		text-decoration: none;
-	}
-
-	/* change colours to suit your needs */
-	mark {
-		background-color: #ff9;
-		color: #000;
-		font-style: italic;
-		font-weight: bold;
-	}
-
-	del {
-		text-decoration: line-through;
-	}
-
-	abbr[title],
-	dfn[title] {
-		border-bottom: 1px dotted;
-		cursor: help;
-	}
-
-	table {
-		border-collapse: collapse;
-		border-spacing: 0;
-	}
-
-	/* change border colour to suit your needs */
-	hr {
-		display: block;
-		height: 1px;
-		border: 0;
-		border-top: 1px solid #cccccc;
-		margin: 1em 0;
-		padding: 0;
-	}
-
-	input,
-	select {
-		vertical-align: middle;
-	}
-
-	/*---------------------------------------------------
-    LESS Prefixer
-  ---------------------------------------------------
-    
-    All of the CSS3 fun, none of the prefixes!
-
-    As a rule, you can use the CSS properties you
-    would expect just by adding a '.':
-
-    box-shadow => .box-shadow(@args)
-
-    Also, when shorthand is available, arguments are
-    not parameterized. Learn CSS, not LESS Prefixer.
-
-    -------------------------------------------------
-    TABLE OF CONTENTS
-    (*) denotes a syntax-sugar helper
-    -------------------------------------------------
-
-        .animation(@args)
-            .animation-delay(@delay)
-            .animation-direction(@direction)
-            .animation-duration(@duration)
-            .animation-iteration-count(@count)
-            .animation-name(@name)
-            .animation-play-state(@state)
-            .animation-timing-function(@function)
-        .background-size(@args)
-        .border-radius(@args)
-        .box-shadow(@args)
-            .inner-shadow(@args) *
-        .box-sizing(@args)
-            .border-box() *
-            .content-box() *
-        .columns(@args)
-            .column-count(@count)
-            .column-gap(@gap)
-            .column-rule(@args)
-            .column-width(@width)
-        .gradient(@default,@start,@stop) *
-            .linear-gradient-top(@default,@color1,@stop1,@color2,@stop2,[@color3,@stop3,@color4,@stop4])*
-            .linear-gradient-left(@default,@color1,@stop1,@color2,@stop2,[@color3,@stop3,@color4,@stop4])*
-        .opacity(@factor)
-        .transform(@args)
-            .rotate(@deg)
-            .scale(@factor)
-            .translate(@x,@y)
-            .translate3d(@x,@y,@z)
-            .translateHardware(@x,@y) *
-        .text-shadow(@args)
-        .transition(@args)
-            .transition-delay(@delay)
-            .transition-duration(@duration)
-            .transition-property(@property)
-            .transition-timing-function(@function)
-
-
-
-    Credit to LESS Elements for the motivation and
-    to CSS3Please.com for implementation.
-
-    Copyright (c) 2012 Joel Sutherland
-    MIT Licensed:
-    https://www.opensource.org/licenses/mit-license.php
-
------------------------------------------------------*/
-	/* Animation */
-	/* Background Size */
-	/* Border Radius */
-	/* Box Shadows */
-	/* Box Sizing */
-	/* Columns */
-	/* Gradients */
-	/* Opacity */
-	/* Text Shadow */
-	/* Transforms */
-	/* Transitions */
-	/**
- * New Media Campaigns Idioms
- *
- * These are common patterns we use in all of our
- * projects. They are consolidated here to keep code DRY.
- *
- * Listing
- *    * .noText,.textReplace
- *    * .noList
- *    * .noForm
- *    * .fixedWidth(@width)
- *    * .columnWidth(@width)
- *    * .columnLeft(@width)
- *    * .columnRight(@width)
- *    * .fullSize
- *    * .absoluteDefault
- *    * .absoluteFullSize
- *    * .clearFix
- */
-	/*  Hides text when using image replacement */
-	.noText,
-	.textReplace {
-		overflow: hidden;
-		text-indent: 100%;
-		white-space: nowrap;
-	}
-
-	/*  Removes bullets, margin, and padding from list */
-	.noList {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-
-	/*  Removes webkit styling from form element */
-	.noForm {
-		border: none;
-		margin: 0;
-		padding: 0;
-		-webkit-appearance: none;
-	}
-
-	/*  Center a fixed width container */
-	/*  Adds left or right columns (e.g. content and sidebar) */
-	/*  Set width and height of element to that of its parent */
-	.fullSize {
-		height: 100%;
-		width: 100%;
-	}
-
-	/*  Position element absolutely to 0,0 */
-	.absoluteDefault {
-		position: absolute;
-		left: 0;
-		top: 0;
-	}
-
-	/*  Position element absolutely and set its width and height to that of its parent (useful for slideshows) */
-	.absoluteFullSize {
-		position: absolute;
-		left: 0;
-		top: 0;
-		height: 100%;
-		width: 100%;
-	}
-
-	/*  The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/ */
-	.clearFix {
-		*zoom: 1;
-	}
-
-	.clearFix:before,
-	.clearFix:after {
-		content: "";
-		display: table;
-	}
-
-	.clearFix:after {
-		clear: both;
-	}
-
-	/**
- * Spacing
- *
- * This LESS file defines margins and paddings for block-level
- * elements. Helper classes are included for use elsewhere
- * in site styles.
- */
-	/* Settings */
-	/**
- * Spacing
- * p, m, lh = padding, margin, line-height
- * a, t, r, b, l, h, v = all, top, right, bottom, left, horizontal, vertical
- * n, h, s, d = none(0px), half(@baseline / 2), single(@baseline), double(@baseline * 2), none(0px)
- * i = ! important
- */
-	.ptn {
-		padding-top: 0px;
-	}
-
-	.ptni {
-		padding-top: 0px !important;
-	}
-
-	.pbn {
-		padding-bottom: 0px;
-	}
-
-	.pbni {
-		padding-bottom: 0px !important;
-	}
-
-	.pln {
-		padding-left: 0px;
-	}
-
-	.plni {
-		padding-left: 0px !important;
-	}
-
-	.prn {
-		padding-right: 0px;
-	}
-
-	.prni {
-		padding-right: 0px !important;
-	}
-
-	.pvn {
-		padding-top: 0px;
-		padding-bottom: 0px;
-	}
-
-	.pvni {
-		padding-top: 0px !important;
-		padding-bottom: 0px !important;
-	}
-
-	.phn {
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-
-	.phni {
-		padding-left: 0px !important;
-		padding-right: 0px !important;
-	}
-
-	.pan {
-		padding-top: 0px;
-		padding-bottom: 0px;
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-
-	.pani {
-		padding-top: 0px !important;
-		padding-bottom: 0px !important;
-		padding-left: 0px !important;
-		padding-right: 0px !important;
-	}
-
-	.mtn {
-		margin-top: 0px;
-	}
-
-	.mtni {
-		margin-top: 0px !important;
-	}
-
-	.mbn {
-		margin-bottom: 0px;
-	}
-
-	.mbni {
-		margin-bottom: 0px !important;
-	}
-
-	.mln {
-		margin-left: 0px;
-	}
-
-	.mlni {
-		margin-left: 0px !important;
-	}
-
-	.mrn {
-		margin-right: 0px;
-	}
-
-	.mrni {
-		margin-right: 0px !important;
-	}
-
-	.mvn {
-		margin-top: 0px;
-		margin-bottom: 0px;
-	}
-
-	.mvni {
-		margin-top: 0px !important;
-		margin-bottom: 0px !important;
-	}
-
-	.mhn {
-		margin-left: 0px;
-		margin-right: 0px;
-	}
-
-	.mhni {
-		margin-left: 0px !important;
-		margin-right: 0px !important;
-	}
-
-	.man {
-		margin-top: 0px;
-		margin-bottom: 0px;
-		margin-left: 0px;
-		margin-right: 0px;
-	}
-
-	.mani {
-		margin-top: 0px !important;
-		margin-bottom: 0px !important;
-		margin-left: 0px !important;
-		margin-right: 0px !important;
-	}
-
-	.lhn {
-		line-height: 0px;
-	}
-
-	.lhni {
-		line-height: 0px !important;
-	}
-
-	.ptq {
-		padding-top: 4px;
-	}
-
-	.ptqi {
-		padding-top: 4px !important;
-	}
-
-	.pbq {
-		padding-bottom: 4px;
-	}
-
-	.pbqi {
-		padding-bottom: 4px !important;
-	}
-
-	.plq {
-		padding-left: 4px;
-	}
-
-	.plqi {
-		padding-left: 4px !important;
-	}
-
-	.prq {
-		padding-right: 4px;
-	}
-
-	.prqi {
-		padding-right: 4px !important;
-	}
-
-	.pvq {
-		padding-top: 4px;
-		padding-bottom: 4px;
-	}
-
-	.pvqi {
-		padding-top: 4px !important;
-		padding-bottom: 4px !important;
-	}
-
-	.phq {
-		padding-left: 4px;
-		padding-right: 4px;
-	}
-
-	.phqi {
-		padding-left: 4px !important;
-		padding-right: 4px !important;
-	}
-
-	.paq {
-		padding-top: 4px;
-		padding-bottom: 4px;
-		padding-left: 4px;
-		padding-right: 4px;
-	}
-
-	.paqi {
-		padding-top: 4px !important;
-		padding-bottom: 4px !important;
-		padding-left: 4px !important;
-		padding-right: 4px !important;
-	}
-
-	.mtq {
-		margin-top: 4px;
-	}
-
-	.mtqi {
-		margin-top: 4px !important;
-	}
-
-	.mbq {
-		margin-bottom: 4px;
-	}
-
-	.mbqi {
-		margin-bottom: 4px !important;
-	}
-
-	.mlq {
-		margin-left: 4px;
-	}
-
-	.mlqi {
-		margin-left: 4px !important;
-	}
-
-	.mrq {
-		margin-right: 4px;
-	}
-
-	.mrqi {
-		margin-right: 4px !important;
-	}
-
-	.mvq {
-		margin-top: 4px;
-		margin-bottom: 4px;
-	}
-
-	.mvqi {
-		margin-top: 4px !important;
-		margin-bottom: 4px !important;
-	}
-
-	.mhq {
-		margin-left: 4px;
-		margin-right: 4px;
-	}
-
-	.mhqi {
-		margin-left: 4px !important;
-		margin-right: 4px !important;
-	}
-
-	.maq {
-		margin-top: 4px;
-		margin-bottom: 4px;
-		margin-left: 4px;
-		margin-right: 4px;
-	}
-
-	.maqi {
-		margin-top: 4px !important;
-		margin-bottom: 4px !important;
-		margin-left: 4px !important;
-		margin-right: 4px !important;
-	}
-
-	.lhq {
-		line-height: 4px;
-	}
-
-	.lhqi {
-		line-height: 4px !important;
-	}
-
-	.pth {
-		padding-top: 8px;
-	}
-
-	.pthi {
-		padding-top: 8px !important;
-	}
-
-	.pbh {
-		padding-bottom: 8px;
-	}
-
-	.pbhi {
-		padding-bottom: 8px !important;
-	}
-
-	.plh {
-		padding-left: 8px;
-	}
-
-	.plhi {
-		padding-left: 8px !important;
-	}
-
-	.prh {
-		padding-right: 8px;
-	}
-
-	.prhi {
-		padding-right: 8px !important;
-	}
-
-	.pvh {
-		padding-top: 8px;
-		padding-bottom: 8px;
-	}
-
-	.pvhi {
-		padding-top: 8px !important;
-		padding-bottom: 8px !important;
-	}
-
-	.phh {
-		padding-left: 8px;
-		padding-right: 8px;
-	}
-
-	.phhi {
-		padding-left: 8px !important;
-		padding-right: 8px !important;
-	}
-
-	.pah {
-		padding-top: 8px;
-		padding-bottom: 8px;
-		padding-left: 8px;
-		padding-right: 8px;
-	}
-
-	.pahi {
-		padding-top: 8px !important;
-		padding-bottom: 8px !important;
-		padding-left: 8px !important;
-		padding-right: 8px !important;
-	}
-
-	.mth {
-		margin-top: 8px;
-	}
-
-	.mthi {
-		margin-top: 8px !important;
-	}
-
-	.mbh {
-		margin-bottom: 8px;
-	}
-
-	.mbhi {
-		margin-bottom: 8px !important;
-	}
-
-	.mlh {
-		margin-left: 8px;
-	}
-
-	.mlhi {
-		margin-left: 8px !important;
-	}
-
-	.mrh {
-		margin-right: 8px;
-	}
-
-	.mrhi {
-		margin-right: 8px !important;
-	}
-
-	.mvh {
-		margin-top: 8px;
-		margin-bottom: 8px;
-	}
-
-	.mvhi {
-		margin-top: 8px !important;
-		margin-bottom: 8px !important;
-	}
-
-	.mhh {
-		margin-left: 8px;
-		margin-right: 8px;
-	}
-
-	.mhhi {
-		margin-left: 8px !important;
-		margin-right: 8px !important;
-	}
-
-	.mah {
-		margin-top: 8px;
-		margin-bottom: 8px;
-		margin-left: 8px;
-		margin-right: 8px;
-	}
-
-	.mahi {
-		margin-top: 8px !important;
-		margin-bottom: 8px !important;
-		margin-left: 8px !important;
-		margin-right: 8px !important;
-	}
-
-	.lhh {
-		line-height: 8px;
-	}
-
-	.lhhi {
-		line-height: 8px !important;
-	}
-
-	.pts {
-		padding-top: 16px;
-	}
-
-	.ptsi {
-		padding-top: 16px !important;
-	}
-
-	.pbs {
-		padding-bottom: 16px;
-	}
-
-	.pbsi {
-		padding-bottom: 16px !important;
-	}
-
-	.pls {
-		padding-left: 16px;
-	}
-
-	.plsi {
-		padding-left: 16px !important;
-	}
-
-	.prs {
-		padding-right: 16px;
-	}
-
-	.prsi {
-		padding-right: 16px !important;
-	}
-
-	.pvs {
-		padding-top: 16px;
-		padding-bottom: 16px;
-	}
-
-	.pvsi {
-		padding-top: 16px !important;
-		padding-bottom: 16px !important;
-	}
-
-	.phs {
-		padding-left: 16px;
-		padding-right: 16px;
-	}
-
-	.phsi {
-		padding-left: 16px !important;
-		padding-right: 16px !important;
-	}
-
-	.pas {
-		padding-top: 16px;
-		padding-bottom: 16px;
-		padding-left: 16px;
-		padding-right: 16px;
-	}
-
-	.pasi {
-		padding-top: 16px !important;
-		padding-bottom: 16px !important;
-		padding-left: 16px !important;
-		padding-right: 16px !important;
-	}
-
-	.mts {
-		margin-top: 16px;
-	}
-
-	.mtsi {
-		margin-top: 16px !important;
-	}
-
-	.mbs {
-		margin-bottom: 16px;
-	}
-
-	.mbsi {
-		margin-bottom: 16px !important;
-	}
-
-	.mls {
-		margin-left: 16px;
-	}
-
-	.mlsi {
-		margin-left: 16px !important;
-	}
-
-	.mrs {
-		margin-right: 16px;
-	}
-
-	.mrsi {
-		margin-right: 16px !important;
-	}
-
-	.mvs {
-		margin-top: 16px;
-		margin-bottom: 16px;
-	}
-
-	.mvsi {
-		margin-top: 16px !important;
-		margin-bottom: 16px !important;
-	}
-
-	.mhs {
-		margin-left: 16px;
-		margin-right: 16px;
-	}
-
-	.mhsi {
-		margin-left: 16px !important;
-		margin-right: 16px !important;
-	}
-
-	.mas {
-		margin-top: 16px;
-		margin-bottom: 16px;
-		margin-left: 16px;
-		margin-right: 16px;
-	}
-
-	.masi {
-		margin-top: 16px !important;
-		margin-bottom: 16px !important;
-		margin-left: 16px !important;
-		margin-right: 16px !important;
-	}
-
-	.lhs {
-		line-height: 16px;
-	}
-
-	.lhsi {
-		line-height: 16px !important;
-	}
-
-	.pt3h {
-		padding-top: 24px;
-	}
-
-	.pt3hi {
-		padding-top: 24px !important;
-	}
-
-	.pb3h {
-		padding-bottom: 24px;
-	}
-
-	.pb3hi {
-		padding-bottom: 24px !important;
-	}
-
-	.pl3h {
-		padding-left: 24px;
-	}
-
-	.pl3hi {
-		padding-left: 24px !important;
-	}
-
-	.pr3h {
-		padding-right: 24px;
-	}
-
-	.pr3hi {
-		padding-right: 24px !important;
-	}
-
-	.pv3h {
-		padding-top: 24px;
-		padding-bottom: 24px;
-	}
-
-	.pv3hi {
-		padding-top: 24px !important;
-		padding-bottom: 24px !important;
-	}
-
-	.ph3h {
-		padding-left: 24px;
-		padding-right: 24px;
-	}
-
-	.ph3hi {
-		padding-left: 24px !important;
-		padding-right: 24px !important;
-	}
-
-	.pa3h {
-		padding-top: 24px;
-		padding-bottom: 24px;
-		padding-left: 24px;
-		padding-right: 24px;
-	}
-
-	.pa3hi {
-		padding-top: 24px !important;
-		padding-bottom: 24px !important;
-		padding-left: 24px !important;
-		padding-right: 24px !important;
-	}
-
-	.mt3h {
-		margin-top: 24px;
-	}
-
-	.mt3hi {
-		margin-top: 24px !important;
-	}
-
-	.mb3h {
-		margin-bottom: 24px;
-	}
-
-	.mb3hi {
-		margin-bottom: 24px !important;
-	}
-
-	.ml3h {
-		margin-left: 24px;
-	}
-
-	.ml3hi {
-		margin-left: 24px !important;
-	}
-
-	.mr3h {
-		margin-right: 24px;
-	}
-
-	.mr3hi {
-		margin-right: 24px !important;
-	}
-
-	.mv3h {
-		margin-top: 24px;
-		margin-bottom: 24px;
-	}
-
-	.mv3hi {
-		margin-top: 24px !important;
-		margin-bottom: 24px !important;
-	}
-
-	.mh3h {
-		margin-left: 24px;
-		margin-right: 24px;
-	}
-
-	.mh3hi {
-		margin-left: 24px !important;
-		margin-right: 24px !important;
-	}
-
-	.ma3h {
-		margin-top: 24px;
-		margin-bottom: 24px;
-		margin-left: 24px;
-		margin-right: 24px;
-	}
-
-	.ma3hi {
-		margin-top: 24px !important;
-		margin-bottom: 24px !important;
-		margin-left: 24px !important;
-		margin-right: 24px !important;
-	}
-
-	.lh3h {
-		line-height: 24px;
-	}
-
-	.lh3hi {
-		line-height: 24px !important;
-	}
-
-	.ptd {
-		padding-top: 32px;
-	}
-
-	.ptdi {
-		padding-top: 32px !important;
-	}
-
-	.pbd {
-		padding-bottom: 32px;
-	}
-
-	.pbdi {
-		padding-bottom: 32px !important;
-	}
-
-	.pld {
-		padding-left: 32px;
-	}
-
-	.pldi {
-		padding-left: 32px !important;
-	}
-
-	.prd {
-		padding-right: 32px;
-	}
-
-	.prdi {
-		padding-right: 32px !important;
-	}
-
-	.pvd {
-		padding-top: 32px;
-		padding-bottom: 32px;
-	}
-
-	.pvdi {
-		padding-top: 32px !important;
-		padding-bottom: 32px !important;
-	}
-
-	.phd {
-		padding-left: 32px;
-		padding-right: 32px;
-	}
-
-	.phdi {
-		padding-left: 32px !important;
-		padding-right: 32px !important;
-	}
-
-	.pad {
-		padding-top: 32px;
-		padding-bottom: 32px;
-		padding-left: 32px;
-		padding-right: 32px;
-	}
-
-	.padi {
-		padding-top: 32px !important;
-		padding-bottom: 32px !important;
-		padding-left: 32px !important;
-		padding-right: 32px !important;
-	}
-
-	.mtd {
-		margin-top: 32px;
-	}
-
-	.mtdi {
-		margin-top: 32px !important;
-	}
-
-	.mbd {
-		margin-bottom: 32px;
-	}
-
-	.mbdi {
-		margin-bottom: 32px !important;
-	}
-
-	.mld {
-		margin-left: 32px;
-	}
-
-	.mldi {
-		margin-left: 32px !important;
-	}
-
-	.mrd {
-		margin-right: 32px;
-	}
-
-	.mrdi {
-		margin-right: 32px !important;
-	}
-
-	.mvd {
-		margin-top: 32px;
-		margin-bottom: 32px;
-	}
-
-	.mvdi {
-		margin-top: 32px !important;
-		margin-bottom: 32px !important;
-	}
-
-	.mhd {
-		margin-left: 32px;
-		margin-right: 32px;
-	}
-
-	.mhdi {
-		margin-left: 32px !important;
-		margin-right: 32px !important;
-	}
-
-	.mad {
-		margin-top: 32px;
-		margin-bottom: 32px;
-		margin-left: 32px;
-		margin-right: 32px;
-	}
-
-	.madi {
-		margin-top: 32px !important;
-		margin-bottom: 32px !important;
-		margin-left: 32px !important;
-		margin-right: 32px !important;
-	}
-
-	.lhd {
-		line-height: 32px;
-	}
-
-	.lhdi {
-		line-height: 32px !important;
-	}
-
-	.pt5h {
-		padding-top: 40px;
-	}
-
-	.pt5hi {
-		padding-top: 40px !important;
-	}
-
-	.pb5h {
-		padding-bottom: 40px;
-	}
-
-	.pb5hi {
-		padding-bottom: 40px !important;
-	}
-
-	.pl5h {
-		padding-left: 40px;
-	}
-
-	.pl5hi {
-		padding-left: 40px !important;
-	}
-
-	.pr5h {
-		padding-right: 40px;
-	}
-
-	.pr5hi {
-		padding-right: 40px !important;
-	}
-
-	.pv5h {
-		padding-top: 40px;
-		padding-bottom: 40px;
-	}
-
-	.pv5hi {
-		padding-top: 40px !important;
-		padding-bottom: 40px !important;
-	}
-
-	.ph5h {
-		padding-left: 40px;
-		padding-right: 40px;
-	}
-
-	.ph5hi {
-		padding-left: 40px !important;
-		padding-right: 40px !important;
-	}
-
-	.pa5h {
-		padding-top: 40px;
-		padding-bottom: 40px;
-		padding-left: 40px;
-		padding-right: 40px;
-	}
-
-	.pa5hi {
-		padding-top: 40px !important;
-		padding-bottom: 40px !important;
-		padding-left: 40px !important;
-		padding-right: 40px !important;
-	}
-
-	.mt5h {
-		margin-top: 40px;
-	}
-
-	.mt5hi {
-		margin-top: 40px !important;
-	}
-
-	.mb5h {
-		margin-bottom: 40px;
-	}
-
-	.mb5hi {
-		margin-bottom: 40px !important;
-	}
-
-	.ml5h {
-		margin-left: 40px;
-	}
-
-	.ml5hi {
-		margin-left: 40px !important;
-	}
-
-	.mr5h {
-		margin-right: 40px;
-	}
-
-	.mr5hi {
-		margin-right: 40px !important;
-	}
-
-	.mv5h {
-		margin-top: 40px;
-		margin-bottom: 40px;
-	}
-
-	.mv5hi {
-		margin-top: 40px !important;
-		margin-bottom: 40px !important;
-	}
-
-	.mh5h {
-		margin-left: 40px;
-		margin-right: 40px;
-	}
-
-	.mh5hi {
-		margin-left: 40px !important;
-		margin-right: 40px !important;
-	}
-
-	.ma5h {
-		margin-top: 40px;
-		margin-bottom: 40px;
-		margin-left: 40px;
-		margin-right: 40px;
-	}
-
-	.ma5hi {
-		margin-top: 40px !important;
-		margin-bottom: 40px !important;
-		margin-left: 40px !important;
-		margin-right: 40px !important;
-	}
-
-	.lh5h {
-		line-height: 40px;
-	}
-
-	.lh5hi {
-		line-height: 40px !important;
-	}
-
-	.ptt {
-		padding-top: 48px;
-	}
-
-	.ptti {
-		padding-top: 48px !important;
-	}
-
-	.pbt {
-		padding-bottom: 48px;
-	}
-
-	.pbti {
-		padding-bottom: 48px !important;
-	}
-
-	.plt {
-		padding-left: 48px;
-	}
-
-	.plti {
-		padding-left: 48px !important;
-	}
-
-	.prt {
-		padding-right: 48px;
-	}
-
-	.prti {
-		padding-right: 48px !important;
-	}
-
-	.pvt {
-		padding-top: 48px;
-		padding-bottom: 48px;
-	}
-
-	.pvti {
-		padding-top: 48px !important;
-		padding-bottom: 48px !important;
-	}
-
-	.pht {
-		padding-left: 48px;
-		padding-right: 48px;
-	}
-
-	.phti {
-		padding-left: 48px !important;
-		padding-right: 48px !important;
-	}
-
-	.pat {
-		padding-top: 48px;
-		padding-bottom: 48px;
-		padding-left: 48px;
-		padding-right: 48px;
-	}
-
-	.pati {
-		padding-top: 48px !important;
-		padding-bottom: 48px !important;
-		padding-left: 48px !important;
-		padding-right: 48px !important;
-	}
-
-	.mtt {
-		margin-top: 48px;
-	}
-
-	.mtti {
-		margin-top: 48px !important;
-	}
-
-	.mbt {
-		margin-bottom: 48px;
-	}
-
-	.mbti {
-		margin-bottom: 48px !important;
-	}
-
-	.mlt {
-		margin-left: 48px;
-	}
-
-	.mlti {
-		margin-left: 48px !important;
-	}
-
-	.mrt {
-		margin-right: 48px;
-	}
-
-	.mrti {
-		margin-right: 48px !important;
-	}
-
-	.mvt {
-		margin-top: 48px;
-		margin-bottom: 48px;
-	}
-
-	.mvti {
-		margin-top: 48px !important;
-		margin-bottom: 48px !important;
-	}
-
-	.mht {
-		margin-left: 48px;
-		margin-right: 48px;
-	}
-
-	.mhti {
-		margin-left: 48px !important;
-		margin-right: 48px !important;
-	}
-
-	.mat {
-		margin-top: 48px;
-		margin-bottom: 48px;
-		margin-left: 48px;
-		margin-right: 48px;
-	}
-
-	.mati {
-		margin-top: 48px !important;
-		margin-bottom: 48px !important;
-		margin-left: 48px !important;
-		margin-right: 48px !important;
-	}
-
-	.lht {
-		line-height: 48px;
-	}
-
-	.lhti {
-		line-height: 48px !important;
-	}
-
-	/**
- * Typography
- *
- * This LESS file defines the baseline, color, font-size, and other typographical
- * styles for text elements.
- */
-	/* Settings */
-	/* Base */
-	html,
-	body {
-		font-family: 'Arial', sans-serif;
-		color: #333333;
-		line-height: 16px;
-	}
-
-	/* Block-level */
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	ul,
-	ol,
-	dl,
-	p,
-	blockquote,
-	table,
-	form,
-	pre {
-		margin-bottom: 16px;
-	}
-
-	/* Headers */
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	.alpha,
-	.beta,
-	.gamma,
-	.delta,
-	.epsilon,
-	.zeta,
-	.giga,
-	.mega,
-	.kilo,
-	.milli {
-		color: #333333;
-		font-family: 'Arial', sans-serif;
-		font-weight: 700;
-	}
-
-	h1,
-	.alpha {
-		font-size: 1.3125em;
-		line-height: 32px;
-	}
-
-	h2,
-	.beta {
-		font-size: 1.2249999999999999em;
-		line-height: 32px;
-	}
-
-	h3,
-	.gamma {
-		font-size: 1.1375em;
-	}
-
-	h4,
-	.delta {
-		font-size: 1.05em;
-		margin-bottom: 0px;
-	}
-
-	h5,
-	.epsilon {
-		font-size: 0.9625000000000001em;
-		margin-bottom: 0px;
-	}
-
-	h6,
-	.zeta {
-		font-size: 0.875em;
-		margin-bottom: 0px;
-	}
-
-	/* Headers (above scale) */
-	.giga {
-		font-size: 1.575em;
-		line-height: 32px;
-	}
-
-	.mega {
-		font-size: 1.4875000000000003em;
-		line-height: 32px;
-	}
-
-	.kilo {
-		font-size: 1.4000000000000001em;
-		line-height: 32px;
-	}
-
-	/* Headers (below scale) */
-	.milli {
-		font-size: 0.7875em;
-	}
-
-	/* Text */
-	a {
-		color: #333333;
-	}
-
-	a:link {
-		text-decoration: none;
-	}
-
-	a:hover {
-		text-decoration: underline;
-	}
-
-	small {
-		font-size: 80%;
-	}
-
-	sup,
-	sub {
-		font-size: 80%;
-		line-height: 0px;
-	}
-
-	sup {
-		vertical-align: super;
-	}
-
-	sub {
-		vertical-align: sub;
-	}
-
-	blockquote {
-		border-left: 5px solid rgba(0, 0, 0, 0.1);
-		margin-left: 16px;
-		margin-right: 16px;
-		padding-left: 16px;
-	}
-
-	blockquote :last-child {
-		margin-bottom: 0px;
-	}
-
-	pre,
-	code,
-	kbd {
-		background: #F8F8F8;
-		border: 1px solid #EAEAEA;
-		-webkit-border-radius: 3px;
-		-moz-border-radius: 3px;
-		border-radius: 3px;
-		-webkit-background-clip: padding-box;
-		-moz-background-clip: padding;
-		background-clip: padding-box;
-		padding: 0 5px;
-		font-family: Consolas, "Courier New", Courier, mono;
-		font-size: 0.7875em;
-		color: #333333;
-		word-wrap: break-word;
-	}
-
-	pre {
-		margin-left: 16px;
-		margin-right: 16px;
-	}
-
-	strong {
-		font-weight: bold;
-	}
-
-	em {
-		font-style: italic;
-	}
-
-	ol,
-	ul,
-	dl {
-		margin-left: 16px;
-		padding-left: 16px;
-	}
-
-	ol ol,
-	ul ol,
-	dl ol,
-	ol ul,
-	ul ul,
-	dl ul {
-		margin-bottom: 0px;
-	}
-
-	dt {
-		font-weight: bold;
-	}
-
-	dd {
-		margin-left: 16px;
-	}
-
-	.table {
-		border-collapse: collapse;
-		border-spacing: 0;
-		width: 100%;
-	}
-
-	.table th,
-	.table td {
-		border-top: 1px solid rgba(0, 0, 0, 0.1);
-		padding: 8px;
-		text-align: left;
-	}
-
-	.table thead th {
-		vertical-align: bottom;
-		font-weight: bold;
-	}
-
-	.table thead tr:first-child th {
-		border-top: none;
-	}
-
-	.table-bordered {
-		border: 1px solid rgba(0, 0, 0, 0.1);
-		border-collapse: separate;
-		border-left: none;
-		-webkit-border-radius: 4px;
-		-moz-border-radius: 4px;
-		border-radius: 4px;
-		-webkit-background-clip: padding-box;
-		-moz-background-clip: padding;
-		background-clip: padding-box;
-	}
-
-	.table-bordered th,
-	.table-bordered td {
-		border-left: 1px solid rgba(0, 0, 0, 0.1);
-	}
-
-	.table-bordered thead:last-child tr:last-child th:first-child,
-	.table-bordered tbody:last-child tr:last-child td:first-child {
-		-webkit-border-radius: 0 0 0 4px;
-		-moz-border-radius: 0 0 0 4px;
-		border-radius: 0 0 0 4px;
-		-webkit-background-clip: padding-box;
-		-moz-background-clip: padding;
-		background-clip: padding-box;
-	}
-
-	.table-striped tbody tr:nth-child(odd) td {
-		background: rgba(0, 0, 0, 0.04);
-	}
-
-	/* ==========================================================================
-   Forms
-   ========================================================================== */
-	label {
-		display: block;
-	}
-
-	label .req {
-		color: red;
-		font-weight: bold;
-	}
-
-	input.text,
-	fieldset,
-	textarea,
-	select,
-	.radio-group,
-	.checkbox-group {
-		display: block;
-		margin-bottom: 16px;
-	}
-
-	input.text,
-	textarea {
-		border: none;
-		margin: 0;
-		padding: 0;
-		-webkit-appearance: none;
-		background: #fff;
-		border: 1px solid #ddd;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		-webkit-border-radius: 4px;
-		-moz-border-radius: 4px;
-		border-radius: 4px;
-		-webkit-background-clip: padding-box;
-		-moz-background-clip: padding;
-		background-clip: padding-box;
-		-webkit-box-shadow: inset rgba(0, 0, 0, 0.1) 0 1px 3px;
-		-moz-box-shadow: inset rgba(0, 0, 0, 0.1) 0 1px 3px;
-		box-shadow: inset rgba(0, 0, 0, 0.1) 0 1px 3px;
-		height: 24px;
-		padding-top: 8px;
-		padding-bottom: 8px;
-		padding-left: 8px;
-		padding-right: 8px;
-		width: 100%;
-		margin-bottom: 16px !important;
-	}
-
-	input.text.error,
-	textarea.error {
-		background-color: #F2DEDE;
-		border-color: red;
-		outline-color: red;
-	}
-
-	textarea {
-		height: 96px;
-	}
-
-	select {
-		min-width: 30%;
-	}
-
-	.checkbox-group label,
-	.radio-group label {
-		font-weight: normal;
-	}
-
-	/* Import Project Files */
-	/* ==========================================================================
-   Site Vars
-   ========================================================================== */
-	/* ==========================================================================
-   Spacing
-   ========================================================================== */
-	/* ==========================================================================
-   Typography Reset
-   ========================================================================== */
-	/* ==========================================================================
-   Grid
-   ========================================================================== */
-	/* Typography */
-	body {
-		font-size: 0.875em;
-		line-height: 1em;
-	}
-
-	/* Block-level */
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	ul,
-	ol,
-	dl,
-	p,
-	blockquote,
-	table,
-	form,
-	pre {
-		margin-bottom: 16px;
-		line-height: 1.66666666666667em;
-	}
-
-	/* Headers */
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	.alpha,
-	.beta,
-	.gamma,
-	.delta,
-	.epsilon,
-	.zeta,
-	.giga,
-	.mega,
-	.kilo,
-	.milli {
-		line-height: 1.2em;
-		color: #333333;
-		font-family: 'Arial', sans-serif;
-		font-weight: 700;
-	}
-
-	h1,
-	.alpha {
-		font-size: 2.66666666666667em;
-	}
-
-	h2,
-	.beta {
-		font-size: 1.66666666666667em;
-	}
-
-	h3,
-	.gamma {
-		font-size: 1.33333333333333em;
-	}
-
-	h4,
-	.delta {
-		font-size: 1.11111111111111em;
-	}
-
-	h5,
-	.epsilon {
-		font-size: 1em;
-	}
-
-	h6,
-	.zeta {
-		font-size: 1em;
-	}
-
-	a {
-		-webkit-transition: 200ms;
-		-moz-transition: 200ms;
-		-o-transition: 200ms;
-		transition: 200ms;
-	}
-
-	/* Tables */
-	table {
-		max-width: 100%;
-	}
-
-	table td,
-	table th {
-		padding: 5px 15px;
-		line-height: 1.2em;
-		text-align: left;
-		border: 1px solid #ccc;
-	}
-
-	table th {
-		color: #fff;
-		background: #000;
-		border-color: #000000;
-	}
-
-	/* Forms */
-	form fieldset {
-		margin: 0 0 1em;
-	}
-
-	form label {
-		font-weight: 700;
-	}
-
-	form input[type="text"],
-	form input[type="search"],
-	form input[type="password"],
-	form input[type="tel"],
-	form input[type="email"],
-	form textarea {
-		margin: 0;
-		padding: 0 10px;
-		width: 100%;
-		height: 40px;
-		line-height: 1.2em;
-		font-family: 'Arial', sans-serif;
-		font-size: 1em;
-		border: 1px solid #ccc;
-		-webkit-box-shadow: 0 0 0 0 #ffffff;
-		-moz-box-shadow: 0 0 0 0 #ffffff;
-		box-shadow: 0 0 0 0 #ffffff;
-		-webkit-border-radius: 0;
-		-moz-border-radius: 0;
-		border-radius: 0;
-		-webkit-background-clip: padding-box;
-		-moz-background-clip: padding;
-		background-clip: padding-box;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		-webkit-appearance: none;
-	}
-
-	form input[type="text"]:focus,
-	form input[type="search"]:focus,
-	form input[type="password"]:focus,
-	form input[type="tel"]:focus,
-	form input[type="email"]:focus,
-	form textarea:focus {
-		outline: none;
-	}
-
-	form textarea {
-		height: 10em;
-		padding: 10px;
-	}
-
-	.btn,
-	input[type="submit"] {
-		font-family: 'Arial', sans-serif;
-		-webkit-appearance: none;
-		cursor: pointer;
-	}
-
-	/* Layout */
-	html {
-		-webkit-text-size-adjust: none;
-		overflow-y: scroll;
-		overflow-x: hidden;
-	}
-
-	* {
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-	}
-
-	.ie7 img {
-		-ms-interpolation-mode: bicubic;
-	}
-
-	body {
-		padding: 20px;
-	}
-
-	.container {
-		*zoom: 1;
-		position: relative;
-		margin: 0 auto;
-		padding: 0 20px;
-		width: 700px;
-		height: 100%;
-	}
-
-	.container:before,
-	.container:after {
-		content: "";
-		display: table;
-	}
-
-	.container:after {
-		clear: both;
-	}
-
-	.lt-ie9 {
-		overflow: visible;
-	}
-
-	.lt-ie9 body {
-		overflow: visible;
-	}
-
-	.lt-ie9 .container {
-		width: 960px;
-	}
-
-	.lt-ie8 {
-		overflow-x: auto;
-		overflow-y: auto;
-	}
-
-	/* LAYOUT
-====================================== */
-	#main {
-		padding-top: 40px;
-	}
-
-	.primary-content {
-		float: left;
-		width: 63%;
-	}
-
-	.sidebar {
-		float: right;
-		width: 31.25%;
-	}
-
-	/* HELPER CLASSES
-====================================== */
-	.inline-block {
-		display: inline-block;
-		*display: inline;
-		zoom: 1;
-	}
-
-	.responsive-img {
-		display: block;
-		max-width: 100%;
-		height: auto;
-	}
-
-	iframe {
-		max-width: 100%;
-	}
-
-	.pattern {
-		background-image: url(../images/pattern.png);
-		background-position: 0 0;
-		background-repeat: repeat;
-	}
-
-	.center {
-		text-align: center;
-	}
-
-	@media screen and (max-width: 700px) {
-		.container {
-			padding: 0 10px;
-		}
-
-		/* LAYOUT
-	====================================== */
-		.primary-content,
-		.sidebar {
-			float: none;
-			margin: 0 auto;
-			width: 100%;
-			max-width: 480px;
-		}
-	}
-
-	/* All */
-	.nav {
-		margin-bottom: 48px;
-	}
-
-	.nav ul {
-		*zoom: 1;
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		background: #333;
-	}
-
-	.nav ul:before,
-	.nav ul:after {
-		content: "";
-		display: table;
-	}
-
-	.nav ul:after {
-		clear: both;
-	}
-
-	.nav ul>li {
-		float: left;
-		position: relative;
-	}
-
-	.nav a {
-		display: block;
-		padding: 10px 20px;
-		line-height: 1.2em;
-		color: #fff;
-		border-left: 1px solid #595959;
-	}
-
-	.nav a:hover {
-		text-decoration: none;
-		background: #595959;
-	}
-
-	.nav li ul {
-		background: #273754;
-	}
-
-	.nav li ul li {
-		width: 200px;
-	}
-
-	.nav li ul a {
-		border: none;
-	}
-
-	.nav li ul a:hover {
-		background: rgba(0, 0, 0, 0.19999999999999996);
-	}
-
-	/* Not Animated
-============================== */
-	.nav1 ul>li:hover ul {
-		left: 0;
-	}
-
-	.nav1 li ul {
-		position: absolute;
-		left: -9999em;
-		top: 36px;
-		z-index: 1;
-	}
-
-	/* Fade In and Out
-============================== */
-	.nav2 ul>li:hover ul {
-		visibility: visible;
-		opacity: 1;
-		filter: alpha(opacity=100);
-	}
-
-	.nav2 li ul {
-		position: absolute;
-		left: 0;
-		top: 36px;
-		z-index: 1;
-		visibility: hidden;
-		opacity: 0;
-		filter: alpha(opacity=0);
-		-webkit-transition: 200ms ease;
-		-moz-transition: 200ms ease;
-		-o-transition: 200ms ease;
-		transition: 200ms ease;
-	}
-
-	/* Slide Down
-============================== */
-	.nav3 ul>li:hover ul li {
-		height: 36px;
-	}
-
-	.nav3 li ul {
-		position: absolute;
-		left: 0;
-		top: 36px;
-		z-index: 1;
-	}
-
-	.nav3 li ul li {
-		overflow: hidden;
-		height: 0;
-		-webkit-transition: height 200ms ease-in;
-		-moz-transition: height 200ms ease-in;
-		-o-transition: height 200ms ease-in;
-		transition: height 200ms ease-in;
-	}
-
-	/* Slide Down 2
-============================== */
-	.nav4 ul>li:hover ul li {
-		max-height: 150px;
-	}
-
-	.nav4 li ul {
-		position: absolute;
-		left: 0;
-		top: 36px;
-		z-index: 1;
-	}
-
-	.nav4 li ul li {
-		overflow: hidden;
-		max-height: 0;
-		-webkit-transition: max-height 500ms ease;
-		-moz-transition: max-height 500ms ease;
-		-o-transition: max-height 500ms ease;
-		transition: max-height 500ms ease;
-	}
-
-	/* Fold Out
-============================== */
-	.nav5 ul>li:hover ul {
-		max-height: 1000px;
-		-webkit-transform: perspective(400) rotate3d(0, 0, 0, 0);
-	}
-
-	.nav5 li ul {
-		position: absolute;
-		left: 0;
-		top: 36px;
-		z-index: 1;
-		max-height: 0;
-		overflow: hidden;
-		-webkit-transform: perspective(400) rotate3d(1, 0, 0, -90deg);
-		-webkit-transform-origin: 50% 0;
-		-webkit-transition: 350ms;
-		-moz-transition: 350ms;
-		-o-transition: 350ms;
-		transition: 350ms;
-	}
-</style>
-
-<body>
-	<div class="container">
-
-		<h1>Animated Navigation Examples</h1>
-
-		<h2>Not Animated</h2>
-		<nav class="nav nav1">
-			<ul>
-				<li>
-					<a href="#">Nav Item</a>
-					<ul>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Nav Item</a>
-					<ul>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Nav Item</a>
-					<ul>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Nav Item</a>
-					<ul>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Nav Item</a>
-					<ul>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
-
-		<h2>Fade In and Out</h2>
-		<nav class="nav nav2">
-			<ul>
-				<li>
-					<a href="#">Nav Item</a>
-					<ul>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Nav Item</a>
-					<ul>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Nav Item</a>
-					<ul>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Nav Item</a>
-					<ul>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Nav Item</a>
-					<ul>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
-
-		<h2>Slide Down #1</h2>
-		<nav class="nav nav3">
-			<ul>
-				<li>
-					<a href="#">Nav Item</a>
-					<ul>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Nav Item</a>
-					<ul>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Nav Item</a>
-					<ul>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Nav Item</a>
-					<ul>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Nav Item</a>
-					<ul>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
-
-		<h2>Slide Down #2</h2>
-		<nav class="nav nav4">
-			<ul>
-				<li>
-					<a href="#">Nav Item</a>
-					<ul>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Nav Item</a>
-					<ul>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Nav Item</a>
-					<ul>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Nav Item</a>
-					<ul>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Nav Item</a>
-					<ul>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
-
-		<h2>Fold Out</h2>
-		<nav class="nav nav5">
-			<ul>
-				<li>
-					<a href="#">Nav Item</a>
-					<ul>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Nav Item</a>
-					<ul>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Nav Item</a>
-					<ul>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Nav Item</a>
-					<ul>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Nav Item</a>
-					<ul>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-						<li><a href="#">Subnav Item</a></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
-
+	<!-- Preloader -->
+	<div id="preloader">
+		<div id="status">&nbsp;</div>
 	</div>
+	<!--  -->
+
+	<!-- header -->
+	<header>
+		<!-- navbar -->
+		<nav id="navbar" class="navbar navbar-custom navbar-fixed-top" data-spy="affix" data-offset-top="70">
+			<div class="container">
+				<div class="row">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header page-scroll">
+						<button type="button" class="navbar-toggle" data-toggle="collapse"
+							data-target="#bs-example-navbar-collapse-1">
+							<i class="fa fa-bars"></i>
+						</button>
+						<a class="navbar-brand page-scroll logo-light" href="index.html"><img alt="" src="image/logo.png"></a>
+						<a class="navbar-brand page-scroll logo-clr" href="index.html"><img alt="" src="image/logo-clr.png"></a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<div class="right-nav text-right">
+							<ul class="nav navbar-nav menu">
+								<li>
+									<a href="#home">Home</a>
+								</li>
+								<li>
+									<a href="#feature">Feature</a>
+								</li>
+								<li>
+									<a href="#overview">Overview</a>
+								</li>
+								<li>
+									<a href="#pricing">Pricing</a>
+								</li>
+								<li>
+									<a href="#team">Team</a>
+								</li>
+								<li>
+									<a href="#blog">blog</a>
+								</li>
+							</ul>
+							<div class="nav-btn">
+								<a class="btn grdnt-purple">Download</a>
+							</div>
+						</div>
+					</div>
+					<!-- /.navbar-collapse -->
+				</div>
+			</div>
+		</nav>
+		<!-- End navbar -->
+
+		<!-- banner -->
+		<div id="home" class="hero grdnt-purple bg-animate style-wave bg-trans-1">
+			<div class="banner">
+				<div class="container">
+					<div class="row hero-content">
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="intro-text light">
+									<h2>It's easy to get Start with Appol Landing page Template</h2>
+									<div class="spce"></div>
+									<p class="large">Happy Tools makes it possible for your office to run smoothly, no matter what it
+										looks like or who makes it go.</p>
+									<div class="btn-holder">
+										<a class="btn btn-white" href="">
+											<i class="fa fa-apple" aria-hidden="true"></i><span>Apple store</span></a>
+										<a class="btn btn-border" href="">
+											<i class="fa fa-android" aria-hidden="true"></i><span>google store</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="img-pre col-md-offset-1 col-md-5 col-sm-6">
+								<div class="slide-side text-center">
+									<img class="phone" alt="" src="image/phone.png">
+									<div class="owl-carousel nplr app-slide-auto">
+										<div>
+											<img alt="" src="image/screen.jpg">
+										</div>
+										<div>
+											<img alt="" src="image/screen2.jpg">
+										</div>
+										<div>
+											<img alt="" src="image/screen3.jpg">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Banner -->
+	</header>
+	<!-- End header -->
+
+	<!--Feat  -->
+	<section class="wow animated fadeIn sec-pad-sm pb-0" data-wow-delay=".3s">
+		<div class="container">
+			<div class="row res-center-sm">
+				<div class="right-dir-col row">
+					<div class="col-md-3 col-sm-6 res-margin">
+						<div class="icon icon-bg-md grdnt-purple">
+							<span class="ti-wallet"></span>
+						</div>
+						<div class="text">
+							<h6>No Hidden Charges</h6>
+							<p>Save your contracts as templates.</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 res-margin">
+						<div class="icon icon-bg-md grdnt-purple">
+							<span class="ti-gallery"></span>
+						</div>
+						<div class="text">
+							<h6>60+ Free Themes</h6>
+							<p>Save your contracts as templates.</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 res-margin">
+						<div class="icon icon-bg-md grdnt-purple">
+							<span class="ti-mobile"></span>
+						</div>
+						<div class="text">
+							<h6>Made For All</h6>
+							<p>Save your contracts as templates.</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<div class="icon icon-bg-md grdnt-purple">
+							<span class="ti-heart"></span>
+						</div>
+						<div class="text">
+							<h6>Fully Featured</h6>
+							<p>Save your contracts as templates.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--  -->
+
+	<!-- Feature -->
+	<section id="feature" class="sec-pad-lg bg-animate">
+		<div class="container">
+			<div class="row">
+				<div class="section-text text-center">
+					<h3 class="clr-blue">Amazing Features</h3>
+					<p class="large">It's easy to track your time by project and task manually.</p>
+				</div>
+				<div class="items">
+					<div class="text-center owl-carousel col-feat feat-slide grad-prple shad-item col-content hover">
+						<div>
+							<div class="icon-md">
+								<span class="clip-txt ti-mobile"></span>
+							</div>
+							<div class="spce sm"></div>
+							<h5>Clean Interface</h5>
+							<p>Save your contracts as templates with tokenized placeholders</p>
+						</div>
+						<div>
+							<div class="icon-md">
+								<span class="clip-txt ti-spray"></span>
+							</div>
+							<div class="spce sm"></div>
+							<h5>Easy Tools</h5>
+							<p> Save your contracts as templates with tokenized placeholders.</p>
+						</div>
+						<div>
+							<div class="icon-md">
+								<span class="clip-txt ti-search"></span>
+							</div>
+							<div class="spce sm"></div>
+							<h5>SEO Friendly</h5>
+							<p> Save your contracts as templates with tokenized placeholders.</p>
+						</div>
+						<div>
+							<div class="icon-md">
+								<span class="clip-txt ti-harddrives"></span>
+							</div>
+							<div class="spce sm"></div>
+							<h5>Secure Account</h5>
+							<p> Save your contracts as templates with tokenized placeholders.</p>
+						</div>
+						<div>
+							<div class="icon-md">
+								<span class="clip-txt ti-comments"></span>
+							</div>
+							<div class="spce sm"></div>
+							<h5>Live Chat</h5>
+							<p> Save your contracts as templates with tokenized placeholders.</p>
+						</div>
+						<div>
+							<div class="icon-md">
+								<span class="clip-txt ti-bolt"></span>
+							</div>
+							<div class="spce sm"></div>
+							<h5>Unlimited Tools</h5>
+							<p> Save your contracts as templates with tokenized placeholders.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="rect1">
+			<img alt="" src="image/shape-1.png">
+		</div>
+		<div class="rect2">
+			<img alt="" src="image/shape-2.png">
+		</div>
+		<div class="rect3">
+			<img alt="" src="image/shape-3.png">
+		</div>
+		<div class="rect4">
+			<img alt="" src="image/shape-4.png">
+		</div>
+	</section>
+	<!-- End feature -->
+
+	<!-- overviews -->
+	<section id="overview" class="sec-pad-lg grdnt-purple light">
+		<div class="container">
+			<div class="row res-center-sm">
+				<div class="section-text text-center">
+					<h3 class="clr-blue">Why Choose This</h3>
+					<p class="large">It's easy to track your time by project and task manually.</p>
+				</div>
+				<div class="tab tab-horizon">
+					<div class="tab-menu text-center">
+						<ul class="tab-list nav nav-tabs">
+							<li class="owl-dot active">
+								<a href="#lA" data-toggle="tab">Management</a>
+							</li>
+							<li class="owl-dot">
+								<a href="#lB" data-toggle="tab">Analytics</a>
+							</li>
+							<li class="owl-dot">
+								<a href="#lC" data-toggle="tab">To do list
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="spce"></div>
+					<div class="spce"></div>
+					<div class="tab-content-block col-md-10 col-md-offset-1">
+						<div class="col-sm-6 text-center res-margin-sm">
+							<div class="slide-side">
+								<img class="phone" alt="" src="image/phone.png">
+								<div class="owl-carousel nplr app-slide">
+									<div>
+										<img alt="" src="image/screen.jpg">
+									</div>
+									<div>
+										<img alt="" src="image/screen2.jpg">
+									</div>
+									<div>
+										<img alt="" src="image/screen3.jpg">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-content col-sm-6 grad-prple">
+							<!-- flight section -->
+							<div class="tab-pane fade active in" id="lA">
+								<div class="right-dir-col hover-grow">
+									<div class="list">
+										<div class="icon icon-bg-md">
+											<span class="clip-txt ti-id-badge"></span>
+										</div>
+										<div class="text">
+											<h6 class="fw-700">
+												Add Account
+											</h6>
+											<p>Utinam laudem mea ei. Est ex cotidieque delicatissimi Doctus praesent usu ut.</p>
+										</div>
+									</div>
+									<div class="list">
+										<div class="icon icon-bg-md">
+											<span class="clip-txt ti-email"></span>
+										</div>
+										<div class="text">
+											<h6 class="fw-700">
+												Sent Mail
+											</h6>
+											<p>Utinam laudem mea ei. Est ex cotidieque delicatissimi Doctus praesent usu ut.</p>
+										</div>
+									</div>
+									<div class="list">
+										<div class="icon icon-bg-md">
+											<span class="clip-txt ti-comment-alt"></span>
+										</div>
+										<div class="text">
+											<h6 class="fw-700">
+												Meeting Clients
+											</h6>
+											<p>Utinam laudem mea ei. Est ex cotidieque delicatissimi Doctus praesent usu ut.</p>
+										</div>
+									</div>
+									<div class="list">
+										<div class="icon icon-bg-md">
+											<span class="clip-txt ti-wallet"></span>
+										</div>
+										<div class="text">
+											<h6 class="fw-700">
+												Payment Request
+											</h6>
+											<p>Utinam laudem mea ei. Est ex cotidieque delicatissimi Doctus praesent usu ut.</p>
+										</div>
+									</div>
+									<div class="list">
+										<div class="icon icon-bg-md">
+											<span class="clip-txt ti-bolt"></span>
+										</div>
+										<div class="text">
+											<h6 class="fw-700">
+												Location Check
+											</h6>
+											<p>Utinam laudem mea ei. Est ex cotidieque delicatissimi Doctus praesent usu ut.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="lB">
+								<div class="right-dir-col hover-grow">
+									<div class="list">
+										<div class="icon icon-bg-md">
+											<span class="clip-txt ti-id-badge"></span>
+										</div>
+										<div class="text">
+											<h6 class="fw-700">
+												Add Account
+											</h6>
+											<p>Utinam laudem mea ei. Est ex cotidieque delicatissimi Doctus praesent usu ut.</p>
+										</div>
+									</div>
+									<div class="list">
+										<div class="icon icon-bg-md">
+											<span class="clip-txt ti-email"></span>
+										</div>
+										<div class="text">
+											<h6 class="fw-700">
+												Sent Mail
+											</h6>
+											<p>Utinam laudem mea ei. Est ex cotidieque delicatissimi Doctus praesent usu ut.</p>
+										</div>
+									</div>
+									<div class="list">
+										<div class="icon icon-bg-md">
+											<span class="clip-txt ti-comment-alt"></span>
+										</div>
+										<div class="text">
+											<h6 class="fw-700">
+												Meeting Clients
+											</h6>
+											<p>Utinam laudem mea ei. Est ex cotidieque delicatissimi Doctus praesent usu ut.</p>
+										</div>
+									</div>
+									<div class="list">
+										<div class="icon icon-bg-md">
+											<span class="clip-txt ti-wallet"></span>
+										</div>
+										<div class="text">
+											<h6 class="fw-700">
+												Payment Request
+											</h6>
+											<p>Utinam laudem mea ei. Est ex cotidieque delicatissimi Doctus praesent usu ut.</p>
+										</div>
+									</div>
+									<div class="list">
+										<div class="icon icon-bg-md">
+											<span class="clip-txt ti-bolt"></span>
+										</div>
+										<div class="text">
+											<h6 class="fw-700">
+												Location Check
+											</h6>
+											<p>Utinam laudem mea ei. Est ex cotidieque delicatissimi Doctus praesent usu ut.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="lC">
+								<div class="right-dir-col hover-grow">
+									<div class="list">
+										<div class="icon icon-bg-md">
+											<span class="clip-txt ti-id-badge"></span>
+										</div>
+										<div class="text">
+											<h6 class="fw-700">
+												Add Account
+											</h6>
+											<p>Utinam laudem mea ei. Est ex cotidieque delicatissimi Doctus praesent usu ut.</p>
+										</div>
+									</div>
+									<div class="list">
+										<div class="icon icon-bg-md">
+											<span class="clip-txt ti-email"></span>
+										</div>
+										<div class="text">
+											<h6 class="fw-700">
+												Sent Mail
+											</h6>
+											<p>Utinam laudem mea ei. Est ex cotidieque delicatissimi Doctus praesent usu ut.</p>
+										</div>
+									</div>
+									<div class="list">
+										<div class="icon icon-bg-md">
+											<span class="clip-txt ti-comment-alt"></span>
+										</div>
+										<div class="text">
+											<h6 class="fw-700">
+												Meeting Clients
+											</h6>
+											<p>Utinam laudem mea ei. Est ex cotidieque delicatissimi Doctus praesent usu ut.</p>
+										</div>
+									</div>
+									<div class="list">
+										<div class="icon icon-bg-md">
+											<span class="clip-txt ti-wallet"></span>
+										</div>
+										<div class="text">
+											<h6 class="fw-700">
+												Payment Request
+											</h6>
+											<p>Utinam laudem mea ei. Est ex cotidieque delicatissimi Doctus praesent usu ut.</p>
+										</div>
+									</div>
+									<div class="list">
+										<div class="icon icon-bg-md">
+											<span class="clip-txt ti-bolt"></span>
+										</div>
+										<div class="text">
+											<h6 class="fw-700">
+												Location Check
+											</h6>
+											<p>Utinam laudem mea ei. Est ex cotidieque delicatissimi Doctus praesent usu ut.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End content -->
+
+	<!--  -->
+	<section class="sec-pad-lg brdr-btm pb-0">
+		<div class="container">
+			<div class="row">
+				<div class="overview flx-container align-flx-center flx-off-xs row col-md-10 col-md-offset-1">
+					<div class="col-sm-5 res-margin-sm">
+						<div class="overview-text res-center-sm">
+							<h3>Easy to Customize</h3>
+							<div class="spce sm"></div>
+							<p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore Ut enim ad minim
+								veniam labore et dolore.</p>
+							<div class="btn-holder grad-prple">
+								<a class="btn grdnt-purple" href="">
+									<i class="fa fa-apple" aria-hidden="true"></i><span>Get It Now</span></a>
+								<a class="btn grdnt-purple fill" href="">
+									<i class="fa fa-android clip-txt" aria-hidden="true"></i><span class="clip-txt">Get It Now</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-offset-1">
+						<div class="overview-img animated wow fadeIn" data-wow-delay=".2s">
+							<img alt="" src="image/img-d.png">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- // -->
+
+	<!-- Counter -->
+	<section class="sec-pad-sm">
+		<div class="container">
+			<div class="row">
+				<div class="static-warapper text-center grad-prple">
+					<div class="col-sm-3 counter-wrapper res-margin-sm">
+						<div class="top-row">
+							<div class="icon icon-md">
+								<span class="ti-heart clip-txt"></span>
+							</div>
+							<h2 class="counter">5310</h2>
+						</div>
+						<p>Happy Users</p>
+					</div>
+					<div class="col-sm-3 counter-wrapper res-margin-sm">
+						<div class="top-row">
+							<div class="icon icon-md">
+								<span class="ti-import clip-txt"></span>
+							</div>
+							<h2 class="counter">1430</h2>
+						</div>
+						<p>total Downloads</p>
+					</div>
+					<div class="col-sm-3 counter-wrapper">
+						<div class="top-row">
+							<div class="icon icon-md">
+								<span class="ti-plug clip-txt"></span>
+							</div>
+							<h2 class="counter">3217</h2>
+						</div>
+						<p>Active Users</p>
+					</div>
+					<div class="col-sm-3 counter-wrapper">
+						<div class="top-row">
+							<div class="icon icon-md">
+								<span class=" ti-comments-smiley clip-txt"></span>
+							</div>
+							<h2 class="counter">3217</h2>
+						</div>
+						<p>Good Reviews</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End counter -->
+
+	<!-- video -->
+	<section class="grdnt-purple parallaxie style-wave-alt  overly" style='background: url("image/bg-parallax.jpg")'>
+		<div class="container sec-pad-lg">
+			<div class="row">
+				<div class="text-center light">
+					<h3>How Apps Connect</h3>
+					<p class="large">It's easy to track your time by project and task manually.</p>
+				</div>
+				<div class="btn-holder text-center grad-prple">
+					<a class="btn-round video" href="#"><i class="fa fa-play clip-txt" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End video -->
+
+	<!-- Pricing -->
+	<section id="pricing" class="sec-pad-lg pb-0  bg-animate grad-prple">
+		<div class="container">
+			<div class="row">
+				<div class="section-text text-center">
+					<h3 class="clr-blue">Choose Your Plans</h3>
+					<p class="large">It's easy to track your time by project and task manually.</p>
+				</div>
+				<div class="pricing-btn text-center">
+					<label class="toggler toggler--is-active" id="filt-monthly">Monthly</label>
+					<div class="toggle grdnt-purple">
+						<input type="checkbox" id="switcher" class="check">
+						<b class="b switch"></b>
+					</div>
+					<label class="toggler" id="filt-hourly">Yearly</label>
+				</div>
+				<div class="spce"></div>
+				<div class="pricing text-center row">
+					<div class="col-md-offset-1 col-md-10">
+						<div class="row">
+							<div id="monthly" class="clearfix model">
+								<div class="col-sm-4">
+									<div class="pricing-table res-margin-sm">
+										<div class="pricing-header">
+											<p class="fw-600 large">Startup</p>
+											<div class="main-pricing">
+												<h1 class="clip-txt">$20<span class="meta fw-300"> / month</span></h1>
+											</div>
+										</div>
+										<div class="pricing-content">
+											<div class="pricing-feature">
+												<ul>
+													<li>24/7 Support</li>
+													<li>Free Update</li>
+													<li>unimited download</li>
+												</ul>
+											</div>
+										</div>
+										<div class="pricing-footer grad-prple">
+											<a class="btn grdnt-purple fill" href="#"><span class="clip-txt">TRY IT NOW</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="pricing-table feat res-margin-sm">
+										<div class="pricing-header">
+											<p class="fw-600 large">Standerd</p>
+											<div class="main-pricing">
+												<h1 class="clip-txt">$10<span class="meta fw-300"> / month</span></h1>
+											</div>
+										</div>
+										<div class="pricing-content">
+											<div class="pricing-feature">
+												<ul>
+													<li>24/7 Support</li>
+													<li>Free Update</li>
+													<li>unimited download</li>
+												</ul>
+											</div>
+										</div>
+										<div class="pricing-footer">
+											<a class="btn grdnt-purple" href="#">TRY IT NOW</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="pricing-table res-margin-sm">
+										<div class="pricing-header">
+											<p class="fw-600 large">Premium</p>
+											<div class="main-pricing">
+												<h1 class="clip-txt">$50<span class="meta fw-300"> / month</span></h1>
+											</div>
+										</div>
+										<div class="pricing-content">
+											<div class="pricing-feature">
+												<ul>
+													<li>24/7 Support</li>
+													<li>Free Update</li>
+													<li>unimited download</li>
+												</ul>
+											</div>
+										</div>
+										<div class="pricing-footer grad-prple">
+											<a class="btn grdnt-purple fill" href="#"><span class="clip-txt">TRY IT NOW</span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="hourly" class="none clearfix model">
+								<div class="col-sm-4">
+									<div class="pricing-table res-margin-sm">
+										<div class="pricing-header">
+											<p class="fw-600 large">Stratup</p>
+											<div class="main-pricing">
+												<h1 class="clip-txt">$100<span class="meta fw-300"> / month</span></h1>
+											</div>
+										</div>
+										<div class="pricing-content">
+											<div class="pricing-feature">
+												<ul>
+													<li>24/7 Support</li>
+													<li>Free Update</li>
+													<li>unimited download</li>
+												</ul>
+											</div>
+										</div>
+										<div class="pricing-footer grad-prple">
+											<a class="btn grdnt-purple fill" href="#"><span class="clip-txt">TRY IT NOW</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="pricing-table feat res-margin-sm">
+										<div class="pricing-header">
+											<p class="fw-600 large">Standerd</p>
+											<div class="main-pricing">
+												<h1 class="clip-txt">$70<span class="meta fw-300"> / month</span></h1>
+											</div>
+										</div>
+										<div class="pricing-content">
+											<div class="pricing-feature">
+												<ul>
+													<li>24/7 Support</li>
+													<li>Free Update</li>
+													<li>unimited download</li>
+												</ul>
+											</div>
+										</div>
+										<div class="pricing-footer">
+											<a class="btn grdnt-purple" href="#">TRY IT NOW</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="pricing-table res-margin-sm">
+										<div class="pricing-header">
+											<p class="fw-600 large">Premium</p>
+											<div class="main-pricing">
+												<h1 class="clip-txt">$300<span class="meta fw-300"> / month</span></h1>
+											</div>
+										</div>
+										<div class="pricing-content">
+											<div class="pricing-feature">
+												<ul>
+													<li>24/7 Support</li>
+													<li>Free Update</li>
+													<li>unimited download</li>
+												</ul>
+											</div>
+										</div>
+										<div class="pricing-footer grad-prple">
+											<a class="btn grdnt-purple fill" href="#"><span class="clip-txt">TRY IT NOW</span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="rect1">
+				<img alt="" src="image/shape-1.png">
+			</div>
+			<div class="rect2">
+				<img alt="" src="image/shape-2.png">
+			</div>
+			<div class="rect3">
+				<img alt="" src="image/shape-3.png">
+			</div>
+			<div class="rect4">
+				<img alt="" src="image/shape-4.png">
+			</div>
+			<div class="row logo sec-pad-sm pb-0 col-md-10 col-md-offset-1">
+				<div class="logo-container row text-center">
+					<div class="col-sm-3 col-xs-6 res-margin-sm">
+						<img alt="" src="image/client-img-1.png">
+					</div>
+					<div class="col-sm-3 col-xs-6 res-margin-sm">
+						<img alt="" src="image/client-img-2.png">
+					</div>
+					<div class="col-sm-3 col-xs-6 res-margin-sm">
+						<img alt="" src="image/client-img-3.png">
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<img alt="" src="image/client-img-4.png">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Pricing -->
+
+	<!-- Screenshot -->
+	<section class="sec-pad-lg bg-gray">
+		<div class="container">
+			<div class="row">
+				<div class="section-text text-center">
+					<h3 class="clr-blue">Screenshot</h3>
+					<p class="large">It's easy to track your time by project and task manually.</p>
+				</div>
+				<div class="screenshot">
+					<div class="owl-carousel screen nplr screen-loop">
+						<div>
+							<img alt="" src="image/screenshot-img-1.jpg">
+						</div>
+						<div>
+							<img alt="" src="image/screenshot-img-2.jpg">
+						</div>
+						<div>
+							<img alt="" src="image/screenshot-img-3.jpg">
+						</div>
+						<div>
+							<img alt="" src="image/screenshot-img-1.jpg">
+						</div>
+						<div>
+							<img alt="" src="image/screenshot-img-2.jpg">
+						</div>
+						<div>
+							<img alt="" src="image/screenshot-img-3.jpg">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Screenshot -->
+
+	<!-- Testimonial -->
+	<section class="sec-pad-lg grdnt-purple light">
+		<div class="section-text text-center">
+			<h3 class="clr-blue">What Users Say</h3>
+			<p class="large">It's easy to track your time by project and task manually.</p>
+		</div>
+		<div class="owl-carousel quote">
+			<div class="quote-item">
+				<div class="quote-text">
+					<div class="rating">
+						<ul class="rating-list">
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li>
+								<p>(5)</p>
+							</li>
+						</ul>
+					</div>
+					<p>Idque accusam ea sit repudiandae id. Quo ex alia natum tritani dolorum persequeris.</p>
+				</div>
+				<div class="spce md"></div>
+				<img alt="" src="image/profile-img.jpg">
+				<div class="reg-tag clearfix">
+					<h6 class="heading">Roger Bentham</h6>
+					<p>Manager</p>
+				</div>
+			</div>
+			<div class="quote-item">
+				<div class="quote-text">
+					<div class="rating">
+						<ul class="rating-list">
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li>
+								<p>(5)</p>
+							</li>
+						</ul>
+					</div>
+					<p>Idque accusam ea sit repudiandae id. Quo ex alia natum tritani dolorum persequeris.</p>
+				</div>
+				<div class="spce md"></div>
+				<img alt="" src="image/profile-img-2.jpg">
+				<div class="reg-tag clearfix">
+					<h6 class="heading">Alena Henry</h6>
+					<p>Manager</p>
+				</div>
+			</div>
+			<div class="quote-item">
+				<div class="quote-text">
+					<div class="rating">
+						<ul class="rating-list">
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li>
+								<p>(5)</p>
+							</li>
+						</ul>
+					</div>
+					<p>Idque accusam ea sit repudiandae id. Quo ex alia natum tritani dolorum persequeris.</p>
+				</div>
+				<div class="spce md"></div>
+				<img alt="" src="image/profile-img-3.jpg">
+				<div class="reg-tag clearfix">
+					<h6 class="heading">John Megan</h6>
+					<p>Manager</p>
+				</div>
+			</div>
+			<div class="quote-item">
+				<div class="quote-text">
+					<div class="rating">
+						<ul class="rating-list">
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li>
+								<p>(5)</p>
+							</li>
+						</ul>
+					</div>
+					<p>Idque accusam ea sit repudiandae id. Quo ex alia natum tritani dolorum persequeris.</p>
+				</div>
+				<div class="spce md"></div>
+				<img alt="" src="image/profile-img.jpg">
+				<div class="reg-tag clearfix">
+					<h6 class="heading">Roger Bentham</h6>
+					<p>Manager</p>
+				</div>
+			</div>
+			<div class="quote-item">
+				<div class="quote-text">
+					<div class="rating">
+						<ul class="rating-list">
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li>
+								<p>(5)</p>
+							</li>
+						</ul>
+					</div>
+					<p>Idque accusam ea sit repudiandae id. Quo ex alia natum tritani dolorum persequeris.</p>
+				</div>
+				<div class="spce md"></div>
+				<img alt="" src="image/profile-img-2.jpg">
+				<div class="reg-tag clearfix">
+					<h6 class="heading">Alena Henry</h6>
+					<p>Manager</p>
+				</div>
+			</div>
+			<div class="quote-item">
+				<div class="quote-text">
+					<div class="rating">
+						<ul class="rating-list">
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							<li>
+								<p>(5)</p>
+							</li>
+						</ul>
+					</div>
+					<p>Idque accusam ea sit repudiandae id. Quo ex alia natum tritani dolorum persequeris.</p>
+				</div>
+				<div class="spce md"></div>
+				<img alt="" src="image/profile-img-3.jpg">
+				<div class="reg-tag clearfix">
+					<h6 class="heading">John Megan</h6>
+					<p>Manager</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End testimonial -->
+
+	<!--  -->
+	<div id="team" class="team sec-pad-lg pb-0 bg-animate grad-prple">
+		<div class="container">
+			<div class="row">
+				<div class="section-text text-center">
+					<h3 class="clr-blue">Our Team</h3>
+					<p class="large">It's easy to track your time by project and task manually.</p>
+				</div>
+				<div class="team-member-profile text-center">
+					<div class="col-md-3 col-sm-6">
+						<div class="team-mem-col res-margin">
+							<div class="link">
+								<div class="team-hover grdnt-purple">
+									<div class="team-hover-content">
+										<ul class="extra-link">
+											<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="image">
+									<img alt="" src="image/team-member.jpg">
+								</div>
+							</div>
+							<div class="spce"></div>
+							<div class="member-name">
+								<h5>Mark Linux</h5>
+								<p class="meta">UI/UX Designer</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<div class="team-mem-col res-margin">
+							<div class="link">
+								<div class="team-hover grdnt-purple">
+									<div class="team-hover-content">
+										<ul class="extra-link">
+											<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="image">
+									<img alt="" src="image/team-member-2.jpg">
+								</div>
+							</div>
+							<div class="spce"></div>
+							<div class="member-name">
+								<h5>Maria Hedge</h5>
+								<p class="meta">UI/UX Designer</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<div class="team-mem-col res-margin">
+							<div class="link">
+								<div class="team-hover grdnt-purple">
+									<div class="team-hover-content">
+										<ul class="extra-link">
+											<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="image">
+									<img alt="" src="image/team-member-3.jpg">
+								</div>
+							</div>
+							<div class="spce"></div>
+							<div class="member-name text-center">
+								<h5>David Flecher</h5>
+								<p class="meta">UI/UX Designer</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<div class="team-mem-col">
+							<div class="link">
+								<div class="team-hover grdnt-purple">
+									<div class="team-hover-content">
+										<ul class="extra-link">
+											<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="image">
+									<img alt="" src="image/team-member-4.jpg">
+								</div>
+							</div>
+							<div class="spce"></div>
+							<div class="member-name">
+								<h5>Riana liza</h5>
+								<p class="meta">UI/UX Designer</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="rect1">
+					<img alt="" src="image/shape-1.png">
+				</div>
+				<div class="rect2">
+					<img alt="" src="image/shape-2.png">
+				</div>
+				<div class="rect3">
+					<img alt="" src="image/shape-3.png">
+				</div>
+				<div class="rect4">
+					<img alt="" src="image/shape-4.png">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--  -->
+	<!--Blog  -->
+	<section id="blog" class="sec-pad-lg bg-gray">
+		<div class="container">
+			<div class="row">
+				<div class="section-text text-center">
+					<h3 class="clr-blue">Latest News</h3>
+					<p class="large">It's easy to track your time by project and task manually.</p>
+				</div>
+				<div class="post row">
+					<div class="col-md-6 res-margin">
+						<div class="post-col">
+							<a href="blog-single.html"><img alt="" src="image/blog-img-1.jpg"></a>
+							<div class="post-content">
+								<div class="spce md"></div>
+								<ul class="post-meta clearfix">
+									<li>Jan 20, 2021</li>
+									<li>
+										<a href="blog-single.html"><i class="fa fa-heart-o" aria-hidden="true"></i>112</a>
+									</li>
+									<li>
+										<a href=""><i class="fa fa-comment-o" aria-hidden="true"></i>22</a>
+									</li>
+								</ul>
+								<div class="post-text">
+									<a href="blog-single.html">
+										<h4>Use keyframes on the timeline to set up animations for the elements</h4>
+										<div class="spce sm"></div>
+										<p>Lorem ipsum dolor sit amet, ridens eligendi an nec, his nostro dolorum splendide te. Docendi
+											intellegebat eu pro, ius in facilis reprimique. Primis aliquando vis ne.</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 res-margin">
+						<div class="post-col res-margin-sm">
+							<a href="blog-single.html"><img alt="" src="image/blog-img-2.jpg"></a>
+							<div class="post-content">
+								<div class="spce"></div>
+								<ul class="post-meta clearfix">
+									<li>Jan 19, 2021</li>
+									<li>
+										<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>112</a>
+									</li>
+									<li>
+										<a href=""><i class="fa fa-comment-o" aria-hidden="true"></i>22</a>
+									</li>
+								</ul>
+								<div class="post-text">
+									<a href="blog-single.html">
+										<h5>Let website visitors interact with your SVG by animating it on mouse over You can find more
+											export options</h5>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="spce"></div>
+						<div class="post-col">
+							<a href="blog-single.html"><img alt="" src="image/blog-img-3.jpg"></a>
+							<div class="post-content">
+								<div class="spce"></div>
+								<ul class="post-meta clearfix">
+									<li>Jan 18, 2021</li>
+									<li>
+										<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>112</a>
+									</li>
+									<li>
+										<a href=""><i class="fa fa-comment-o" aria-hidden="true"></i>22</a>
+									</li>
+								</ul>
+								<div class="post-text">
+									<a href="blog-single.html">
+										<h5>Top 10 revoulationary app for your every day life.</h5>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End blog -->
+
+	<!-- download-section -->
+	<section class="grdnt-purple">
+		<div class="parallax-bg sec-pad-lg" style='background-image: url("image/bg-parallax-c.png")'
+			data-stellar-background-ratio="0.5">
+			<div class="container">
+				<div class="row">
+					<div class="row light ">
+						<div class="col-md-5 col-sm-7">
+							<h2>Available On All App Store </h2>
+							<p class="large">Download now & enjoy app with unimited features</p>
+							<div class="btn-holder">
+								<a href="#"><img alt="" src="image/is-badge.png"></a>
+								<a href="#"><img alt="" src="image/an-badge.png"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End download-section -->
+
+	<!-- faq -->
+	<section class="sec-pad-lg grad-prple">
+		<div class="container">
+			<div class="row">
+				<div class="section-text text-center">
+					<h3 class="clr-blue">Most Asked Quetions</h3>
+					<p class="large">It's easy to track your time by project and task manually.</p>
+				</div>
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1 faq">
+						<div class="row">
+							<div class="panel-group col-md-6 res-margin" id="accordion" role="tablist" aria-multiselectable="true">
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingOne">
+										<h4 class="panel-title">
+											<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+												aria-expanded="true" aria-controls="collapseOne" class="">
+												<i class="more-less glyphicon glyphicon-minus"></i>
+												What is App?
+											</a>
+										</h4>
+									</div>
+									<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+										<div class="panel-body">
+											<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+												3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+												laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+												coffee nulla assumenda shoreditch.</p>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingTwo">
+										<h4 class="panel-title">
+											<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
+												aria-expanded="true" aria-controls="collapseOne" class="collapsed">
+												<i class="more-less glyphicon glyphicon-plus"></i>
+												How it works?
+											</a>
+										</h4>
+									</div>
+									<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+										<div class="panel-body">
+											<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+												3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+												laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+												coffee nulla assumenda shoreditch.</p>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingThree">
+										<h4 class="panel-title">
+											<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
+												aria-expanded="true" aria-controls="collapseOne" class="collapsed">
+												<i class="more-less glyphicon glyphicon-plus"></i>
+												How to use?
+											</a>
+										</h4>
+									</div>
+									<div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+										aria-labelledby="headingThree">
+										<div class="panel-body">
+											<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+												3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+												laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+												coffee nulla assumenda shoreditch.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="bg-light contact-form pd-30">
+									<h5>Have Any Questions</h5>
+									<div class="spce"></div>
+									<form id="contact-form" class="custom-form" method="post" action="assets/contact.php" role="form">
+										<div class="messages"></div>
+										<div class="controls">
+											<div class="form-group">
+												<input id="form_name" type="text" name="name" class="form-control"
+													placeholder="Enter your name *" required="required" data-error="Name is required.">
+												<div class="help-block with-errors"></div>
+											</div>
+											<div class="form-group">
+												<input id="form_email" type="email" name="email" class="form-control"
+													placeholder="Enter your email *" required="required" data-error="Valid email is required.">
+												<div class="help-block with-errors"></div>
+											</div>
+											<div class="form-group">
+												<textarea id="form_message" name="message" class="form-control" placeholder="Message*" rows="4"
+													required="required" data-error="Please,leave us a message."></textarea>
+												<div class="help-block with-errors"></div>
+											</div>
+											<input type="submit" class="btn grdnt-purple" value="Send Message">
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--  -->
+
+	<!--Footer  -->
+	<footer class="footer-wrapper style-wave-alt grdnt-purple sec-pad light">
+		<div class="container footer-content">
+			<div class="row">
+				<div class="section-text text-center">
+					<h3 class="clr-blue">Subscribe</h3>
+					<p class="large">It's easy to track your time by project and task manually.</p>
+				</div>
+				<div class="row">
+					<div class="sub-input subscribe col-md-6 col-md-offset-3 custom-form animated wow fadeInUp"
+						data-wow-delay=".1s">
+						<form class="custom-form" action="assets/subscribe.php" method="post">
+							<div class="form-group">
+								<label style="display:none;" for="subscribe-email"><i class="fa fa-envelope-o"
+										aria-hidden="true"></i></label>
+								<input type="text" name="email" placeholder="Enter email..." class="subscribe-email form-control"
+									id="subscribe-email">
+							</div>
+							<button type="submit" class="btn grdnt-purple">Subscribe</button>
+						</form>
+						<div class="text-center light result-box">
+							<div class="success-message"></div>
+							<div class="error-message"></div>
+						</div>
+					</div>
+				</div>
+				<div class="spce md"></div>
+				<ul class="social-holder text-center light">
+					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+				</ul>
+				<div class="spce"></div>
+				<div class="copyright text-center light">Copyright &copy; 2021.Company name All rights reserved.<a
+						target="_blank" href="http://www.cssmoban.com/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></div>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer -->
+
+	<!-- script -->
+	<script src="js/vendor.bundle.js"></script>
+	<script src="js/script.js"></script>
+
 </body>
 
 </html>
